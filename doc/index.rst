@@ -114,14 +114,13 @@ Other Python wrappers for GMT:
     :caption: Getting Started
 
     install.rst
-    tutorials/first-steps.ipynb
+    gallery/index.rst
 
 .. toctree::
     :maxdepth: 2
     :hidden:
     :caption: User Guide
 
-    tutorials/plot-data-points.ipynb
     api/index.rst
     sphinxext.rst
     design.rst
