@@ -65,6 +65,7 @@ before_install:
     # Download and install miniconda and setup dependencies
     # Need to source the script to set the PATH variable globaly
     - source continuous-integration/travis/setup-miniconda.sh
+    - pip install --upgrade https://github.com/sphinx-gallery/sphinx-gallery/archive/master.zip
     - if [ "$COVERAGE" == "true" ]; then
         pip install codecov codacy-coverage codeclimate-test-reporter;
       fi
