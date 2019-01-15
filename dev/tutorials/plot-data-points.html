@@ -34,7 +34,7 @@
   <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Installing" href="../install.html" />
+    <link rel="next" title="Sphinx Extension" href="../sphinxext.html" />
     <link rel="prev" title="First Steps with GMT/Python" href="first-steps.html" />
     
     <script src="../_static/require.js"></script>
@@ -86,23 +86,25 @@
               
             
             
-              <p class="caption"><span class="caption-text">Documentation</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Tutorials</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="first-steps.html">First Steps with GMT/Python</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Plotting data points</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Cartesian-plots">Cartesian plots</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Plotting-directly-from-a-file">Plotting directly from a file</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Making-maps-using-sample-data">Making maps using sample data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Interactive-map-previews">Interactive map previews</a></li>
-</ul>
-</li>
-</ul>
-</li>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../install.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="first-steps.html">First Steps with GMT/Python</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Guide</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Plotting data points</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Cartesian-plots">Cartesian plots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Plotting-directly-from-a-file">Plotting directly from a file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Making-maps-using-sample-data">Making maps using sample data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Interactive-map-previews">Interactive map previews</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinxext.html">Sphinx Extension</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Reference documentation</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../api/index.html">API Reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../design.html">Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
 </ul>
 
             
@@ -114,15 +116,17 @@
         </p>
         <ul>
             
-                <li class="toctree-l1"><a href="http://try.gmtpython.xyz"><i class="fa fa-book fa-fw"></i> Try it online!</a></li>
+                <li class="toctree-l1"><a href="http://try.gmtpython.xyz"><i class="fa fa-play fa-fw"></i> Try it online!</a></li>
+            
+                <li class="toctree-l1"><a href="https://github.com/GenericMappingTools/gmt-python"><i class="fa fa-github fa-fw"></i> Source Code</a></li>
             
                 <li class="toctree-l1"><a href="https://github.com/GenericMappingTools/gmt-python/blob/master/CONTRIBUTING.md"><i class="fa fa-users fa-fw"></i> Contributing</a></li>
             
-                <li class="toctree-l1"><a href="https://github.com/GenericMappingTools/gmt-python/blob/master/CODE_OF_CONDUCT.md"><i class="fa fa-gavel fa-fw"></i> Code of Conduct</a></li>
+                <li class="toctree-l1"><a href="https://github.com/GenericMappingTools/gmt-python/blob/master/CODE_OF_CONDUCT.md"><i class="fa fa-book fa-fw"></i> Code of Conduct</a></li>
+            
+                <li class="toctree-l1"><a href="https://github.com/GenericMappingTools/gmt-python/blob/master/LICENSE.txt"><i class="fa fa-gavel fa-fw"></i> License</a></li>
             
                 <li class="toctree-l1"><a href="https://gitter.im/GenericMappingTools/gmt-python"><i class="fa fa-comment fa-fw"></i> Contact</a></li>
-            
-                <li class="toctree-l1"><a href="https://github.com/GenericMappingTools/gmt-python"><i class="fa fa-github fa-fw"></i> Source Code</a></li>
             
         </ul>
     
@@ -168,8 +172,6 @@
   <ul class="wy-breadcrumbs">
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
-        
-          <li><a href="index.html">Tutorials</a> &raquo;</li>
         
       <li>Plotting data points</li>
     
@@ -252,18 +254,18 @@ div.nblast {
 
 /* input prompt */
 div.nbinput div.prompt pre {
-    color: #303F9F;
+    color: #307FC1;
 }
 
 /* output prompt */
 div.nboutput div.prompt pre {
-    color: #D84315;
+    color: #BF5B3D;
 }
 
 /* all prompts */
 div.nbinput div.prompt,
 div.nboutput div.prompt {
-    min-width: 8ex;
+    min-width: 5ex;
     padding-top: 0.4em;
     padding-right: 0.4em;
     text-align: right;
@@ -303,9 +305,9 @@ div.nboutput div.output_area {
 
 /* input area */
 div.nbinput div.input_area {
-    border: 1px solid #cfcfcf;
+    border: 1px solid #e0e0e0;
     border-radius: 2px;
-    background: #f7f7f7;
+    background: #f5f5f5;
 }
 
 /* override MathJax center alignment in output cells */
@@ -313,7 +315,7 @@ div.nboutput div[class*=MathJax] {
     text-align: left !important;
 }
 
-/* override sphinx.ext.pngmath center alignment in output cells */
+/* override sphinx.ext.imgmath center alignment in output cells */
 div.nboutput div.math p {
     text-align: left;
 }
@@ -363,6 +365,40 @@ div.nboutput div.output_area.stderr {
 .ansi-bold { font-weight: bold; }
 .ansi-underline { text-decoration: underline; }
 
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
 /* CSS overrides for sphinx_rtd_theme */
 
 /* 24px margin */
@@ -379,14 +415,18 @@ div.nboutput div.output_area.stderr {
 .admonition > p:before {
     margin-right: 4px;  /* make room for the exclamation icon */
 }
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
 </style>
 <div class="section" id="Plotting-data-points">
 <h1>Plotting data points<a class="headerlink" href="#Plotting-data-points" title="Permalink to this headline">¶</a></h1>
 <p>This tutorial will show you how to plot data points with GMT/Python.</p>
 <p>Start by importing the <code class="docutils literal notranslate"><span class="pre">gmt</span></code> Python package:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [1]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -396,12 +436,9 @@ div.nboutput div.output_area.stderr {
 </div>
 <div class="section" id="Cartesian-plots">
 <h2>Cartesian plots<a class="headerlink" href="#Cartesian-plots" title="Permalink to this headline">¶</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">gmt.Figure</span></code> class has a <code class="docutils literal notranslate"><span class="pre">plot</span></code> method for displaying points and
-lines. Let’s make a Cartesian x, y plot using some random data generated
-using numpy:</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">gmt.Figure</span></code> class has a <code class="docutils literal notranslate"><span class="pre">plot</span></code> method for displaying points and lines. Let’s make a Cartesian x, y plot using some random data generated using numpy:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [2]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -410,8 +447,7 @@ using numpy:</p>
 </div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [3]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -427,11 +463,9 @@ using numpy:</p>
 </pre></div>
 </div>
 </div>
-<p>Now we can plot the data using <code class="docutils literal notranslate"><span class="pre">Figure.plot</span></code> and the Cartesian
-projection <code class="docutils literal notranslate"><span class="pre">X</span></code>.</p>
+<p>Now we can plot the data using <code class="docutils literal notranslate"><span class="pre">Figure.plot</span></code> and the Cartesian projection <code class="docutils literal notranslate"><span class="pre">X</span></code>.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [4]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -445,20 +479,16 @@ projection <code class="docutils literal notranslate"><span class="pre">X</span>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>Out[4]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/tutorials_plot-data-points_6_0.png" src="../_images/tutorials_plot-data-points_6_0.png" />
+<a class="reference internal image-reference" href="../_images/tutorials_plot-data-points_6_0.png"><img alt="../_images/tutorials_plot-data-points_6_0.png" src="../_images/tutorials_plot-data-points_6_0.png" style="width: 500px;" /></a>
 </div>
 </div>
-<p>We can make the size of the markers follow the fake “magnitude” values
-by passing in the argument <code class="docutils literal notranslate"><span class="pre">sizes</span></code> to <code class="docutils literal notranslate"><span class="pre">Figure.plot</span></code>. We’ll need to
-scale the magnitude so that it will reflect the size in centimeters.</p>
+<p>We can make the size of the markers follow the fake “magnitude” values by passing in the argument <code class="docutils literal notranslate"><span class="pre">sizes</span></code> to <code class="docutils literal notranslate"><span class="pre">Figure.plot</span></code>. We’ll need to scale the magnitude so that it will reflect the size in centimeters.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [5]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -470,24 +500,19 @@ scale the magnitude so that it will reflect the size in centimeters.</p>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>Out[5]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/tutorials_plot-data-points_8_0.png" src="../_images/tutorials_plot-data-points_8_0.png" />
+<a class="reference internal image-reference" href="../_images/tutorials_plot-data-points_8_0.png"><img alt="../_images/tutorials_plot-data-points_8_0.png" src="../_images/tutorials_plot-data-points_8_0.png" style="width: 500px;" /></a>
 </div>
 </div>
 </div>
 <div class="section" id="Plotting-directly-from-a-file">
 <h2>Plotting directly from a file<a class="headerlink" href="#Plotting-directly-from-a-file" title="Permalink to this headline">¶</a></h2>
-<p>Sometimes you’ll have data in a file that you just want to plot without
-having to load it into Python. You can use the <code class="docutils literal notranslate"><span class="pre">data</span></code> argument of
-<code class="docutils literal notranslate"><span class="pre">Figure.plot</span></code> to specify the file name instead <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>. GMT
-will take care of loading your data and plotting.</p>
+<p>Sometimes you’ll have data in a file that you just want to plot without having to load it into Python. You can use the <code class="docutils literal notranslate"><span class="pre">data</span></code> argument of <code class="docutils literal notranslate"><span class="pre">Figure.plot</span></code> to specify the file name instead <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>. GMT will take care of loading your data and plotting.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [6]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -497,13 +522,9 @@ will take care of loading your data and plotting.</p>
 </pre></div>
 </div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">columns</span></code> argument controls which columns are used as x, y, color,
-and size, respectively. GMT allows some basic operations on the column
-values before plotting. For example, adding <code class="docutils literal notranslate"><span class="pre">sVALUE</span></code> to a column index
-will multiply it by that value before plotting.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">columns</span></code> argument controls which columns are used as x, y, color, and size, respectively. GMT allows some basic operations on the column values before plotting. For example, adding <code class="docutils literal notranslate"><span class="pre">sVALUE</span></code> to a column index will multiply it by that value before plotting.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [7]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -516,31 +537,20 @@ will multiply it by that value before plotting.</p>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>Out[7]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/tutorials_plot-data-points_12_0.png" src="../_images/tutorials_plot-data-points_12_0.png" />
+<a class="reference internal image-reference" href="../_images/tutorials_plot-data-points_12_0.png"><img alt="../_images/tutorials_plot-data-points_12_0.png" src="../_images/tutorials_plot-data-points_12_0.png" style="width: 500px;" /></a>
 </div>
 </div>
 </div>
 <div class="section" id="Making-maps-using-sample-data">
 <h2>Making maps using sample data<a class="headerlink" href="#Making-maps-using-sample-data" title="Permalink to this headline">¶</a></h2>
-<p>GMT shines when plotting data on a map. We can use some <strong>sample data</strong>
-that is packaged with GMT to try this out. They can be accessed using
-special file names that begin with an <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> symbol, for example
-<code class="docutils literal notranslate"><span class="pre">&#64;tut_quakes.ngdc</span></code>. You can supply these names as the <code class="docutils literal notranslate"><span class="pre">data</span></code>
-argument in <code class="docutils literal notranslate"><span class="pre">Figure.plot</span></code> and other plotting functions. If you don’t
-have the files already, they are automatically downloaded by GMT and
-saved to a cache directory (usually <code class="docutils literal notranslate"><span class="pre">~/.gmt/cache</span></code>).</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">gmt.datasets</span></code> package allows easy access to these data files as
-Python data types. For example, we can access the sample dataset of
-tsunami generating earthquakes around Japan (<code class="docutils literal notranslate"><span class="pre">&#64;tut_quakes.ngdc</span></code>) as a
-<code class="docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code> using the <code class="docutils literal notranslate"><span class="pre">datasets.load_japan_quakes</span></code> function:</p>
+<p>GMT shines when plotting data on a map. We can use some <strong>sample data</strong> that is packaged with GMT to try this out. They can be accessed using special file names that begin with an <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> symbol, for example <code class="docutils literal notranslate"><span class="pre">&#64;tut_quakes.ngdc</span></code>. You can supply these names as the <code class="docutils literal notranslate"><span class="pre">data</span></code> argument in <code class="docutils literal notranslate"><span class="pre">Figure.plot</span></code> and other plotting functions. If you don’t have the files already, they are automatically downloaded by GMT and saved to a cache directory (usually <code class="docutils literal notranslate"><span class="pre">~/.gmt/cache</span></code>).</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">gmt.datasets</span></code> package allows easy access to these data files as Python data types. For example, we can access the sample dataset of tsunami generating earthquakes around Japan (<code class="docutils literal notranslate"><span class="pre">&#64;tut_quakes.ngdc</span></code>) as a <code class="docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code> using the <code class="docutils literal notranslate"><span class="pre">datasets.load_japan_quakes</span></code> function:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [8]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -552,11 +562,10 @@ tsunami generating earthquakes around Japan (<code class="docutils literal notra
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>Out[8]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
-<div class="output_area docutils container">
+<div class="output_area rendered_html docutils container">
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -639,13 +648,10 @@ tsunami generating earthquakes around Japan (<code class="docutils literal notra
 </table>
 </div></div>
 </div>
-<p>The functions returns to us the data in a <code class="docutils literal notranslate"><span class="pre">pandas.Dataframe</span></code> object
-that contains the date, hypocenter coordinates, and magnitude of the
-earthquakes.</p>
+<p>The functions returns to us the data in a <code class="docutils literal notranslate"><span class="pre">pandas.Dataframe</span></code> object that contains the date, hypocenter coordinates, and magnitude of the earthquakes.</p>
 <p>Let’s make a local Mercator map of the epicenter coordinates.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [9]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -655,8 +661,7 @@ earthquakes.</p>
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [10]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -669,30 +674,17 @@ earthquakes.</p>
 </pre></div>
 </div>
 </div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="stderr output_area docutils container">
-<div class="highlight"><pre>
-/home/travis/miniconda3/envs/testenv/lib/python3.6/site-packages/gmt/clib/utils.py:241: FutureWarning: Method .as_matrix will be removed in a future version. Use .values instead.
-  return vector.as_matrix()
-</pre></div></div>
-</div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>Out[10]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/tutorials_plot-data-points_17_1.png" src="../_images/tutorials_plot-data-points_17_1.png" />
+<a class="reference internal image-reference" href="../_images/tutorials_plot-data-points_17_0.png"><img alt="../_images/tutorials_plot-data-points_17_0.png" src="../_images/tutorials_plot-data-points_17_0.png" style="width: 500px;" /></a>
 </div>
 </div>
-<p>As before, we can map the size of the markers to the earthquake
-magnitude. Because the magnitude is on a logarithmic scale, it helps to
-show the differences by scaling the values using a power law.</p>
+<p>As before, we can map the size of the markers to the earthquake magnitude. Because the magnitude is on a logarithmic scale, it helps to show the differences by scaling the values using a power law.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [11]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -706,30 +698,17 @@ show the differences by scaling the values using a power law.</p>
 </pre></div>
 </div>
 </div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="stderr output_area docutils container">
-<div class="highlight"><pre>
-/home/travis/miniconda3/envs/testenv/lib/python3.6/site-packages/gmt/clib/utils.py:241: FutureWarning: Method .as_matrix will be removed in a future version. Use .values instead.
-  return vector.as_matrix()
-</pre></div></div>
-</div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>Out[11]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/tutorials_plot-data-points_19_1.png" src="../_images/tutorials_plot-data-points_19_1.png" />
+<a class="reference internal image-reference" href="../_images/tutorials_plot-data-points_19_0.png"><img alt="../_images/tutorials_plot-data-points_19_0.png" src="../_images/tutorials_plot-data-points_19_0.png" style="width: 500px;" /></a>
 </div>
 </div>
-<p>We can also map the colors of the markers to the depths by passing an
-array to the <code class="docutils literal notranslate"><span class="pre">color</span></code> argument and providing a colormap name
-(<code class="docutils literal notranslate"><span class="pre">cmap</span></code>). We can even use the new matplotlib colormap <code class="docutils literal notranslate"><span class="pre">&quot;viridis&quot;</span></code>.</p>
+<p>We can also map the colors of the markers to the depths by passing an array to the <code class="docutils literal notranslate"><span class="pre">color</span></code> argument and providing a colormap name (<code class="docutils literal notranslate"><span class="pre">cmap</span></code>). We can even use the new matplotlib colormap <code class="docutils literal notranslate"><span class="pre">&quot;viridis&quot;</span></code>.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [12]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -744,34 +723,20 @@ array to the <code class="docutils literal notranslate"><span class="pre">color<
 </pre></div>
 </div>
 </div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="stderr output_area docutils container">
-<div class="highlight"><pre>
-/home/travis/miniconda3/envs/testenv/lib/python3.6/site-packages/gmt/clib/utils.py:241: FutureWarning: Method .as_matrix will be removed in a future version. Use .values instead.
-  return vector.as_matrix()
-</pre></div></div>
-</div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>Out[12]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/tutorials_plot-data-points_21_1.png" src="../_images/tutorials_plot-data-points_21_1.png" />
+<a class="reference internal image-reference" href="../_images/tutorials_plot-data-points_21_0.png"><img alt="../_images/tutorials_plot-data-points_21_0.png" src="../_images/tutorials_plot-data-points_21_0.png" style="width: 500px;" /></a>
 </div>
 </div>
 </div>
 <div class="section" id="Interactive-map-previews">
 <h2>Interactive map previews<a class="headerlink" href="#Interactive-map-previews" title="Permalink to this headline">¶</a></h2>
-<p>Let’s preview this map using the <strong>interactive globe</strong>. In this case, we
-don’t need the frame or color in the oceans. We must also use a
-<strong>Cartesian projection</strong> (X) and degrees (d) for plot units so that the
-figure can be aligned with the globe.</p>
+<p>Let’s preview this map using the <strong>interactive globe</strong>. In this case, we don’t need the frame or color in the oceans. We must also use a <strong>Cartesian projection</strong> (X) and degrees (d) for plot units so that the figure can be aligned with the globe.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [13]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -785,22 +750,12 @@ figure can be aligned with the globe.</p>
 </pre></div>
 </div>
 </div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="stderr output_area docutils container">
-<div class="highlight"><pre>
-/home/travis/miniconda3/envs/testenv/lib/python3.6/site-packages/gmt/clib/utils.py:241: FutureWarning: Method .as_matrix will be removed in a future version. Use .values instead.
-  return vector.as_matrix()
-</pre></div></div>
-</div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>Out[13]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
-<div class="output_area docutils container">
-<canvas id="gmt-python-t0cm292d" width="500" height="500">
+<div class="output_area rendered_html docutils container">
+<canvas id="gmt-python-p2_amz22" width="500" height="500">
     Your browser does not support HTML5 Canvas.
 </canvas>
 
@@ -813,7 +768,7 @@ figure can be aligned with the globe.</p>
     require(['WorldWind'],
     function (WorldWind) {
 
-        var wwd = new WorldWind.WorldWindow("gmt-python-t0cm292d");
+        var wwd = new WorldWind.WorldWindow("gmt-python-p2_amz22");
 
         // Add an image source as layer
         var image = new Image()
@@ -858,7 +813,7 @@ figure can be aligned with the globe.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../install.html" class="btn btn-neutral float-right" title="Installing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../sphinxext.html" class="btn btn-neutral float-right" title="Sphinx Extension" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="first-steps.html" class="btn btn-neutral" title="First Steps with GMT/Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -870,8 +825,8 @@ figure can be aligned with the globe.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, Leonardo Uieda and Paul Wessel.
-      Last updated on Jun 14, 2018.
+        &copy; Copyright 2017-2018, Leonardo Uieda and Paul Wessel
+      Last updated on Jan 15, 2019.
 
     </p>
   </div>
@@ -890,21 +845,14 @@ figure can be aligned with the globe.</p>
 
   
 
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'',
-            LANGUAGE:'None',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
 
   
 
